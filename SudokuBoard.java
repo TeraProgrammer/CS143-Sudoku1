@@ -20,6 +20,17 @@ public class SudokuBoard{
    }
    
    public String toString(){
-      return "";
+      StringBuilder build = new StringBuilder();
+      build.append("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+      
+      for (int r = 0; r < board.length; r++) {
+         build.append("{ } { ");
+         for (int c = 0; c < board[0].length; c++){
+            build.append(board[r][c] + " }{ ");
+         }
+         build.append("}\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+      }
+      
+      return build.toString();
    }
 }
